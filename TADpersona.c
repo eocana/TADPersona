@@ -45,6 +45,27 @@ int Persona_getEdad(Persona *persona){
 int Persona_getPeso(Persona *persona){
     return persona->peso;
 }
+
+void Persona_setNombre(Persona *persona, char nombre[10]){
+    strcpy(persona->nombre, nombre);
+}
+void Persona_setDni(Persona *persona, char dni[10]){
+    strcpy(persona->dni, dni);
+}
+void Persona_setEdad(Persona *persona, int edad){
+    persona->edad = edad;
+}
+void Persona_setPeso(Persona *persona, float peso){
+    persona->peso = peso;
+}
+
+void Persona_toString(Persona *persona){
+    printf("\nMe llamo %s, tengo actualmente %d y peso alrededor de los %.2f", persona->nombre, persona->edad, persona->peso );
+    printf("\nY mi DNI es: %s\n\n", persona->dni);
+
+}
+
+
 void Persona_destruir(Persona *persona){
     free(persona);
 }
