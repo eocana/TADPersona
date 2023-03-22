@@ -5,26 +5,4 @@
 #ifndef TADPERSONA_TADPERSONA_H
 #define TADPERSONA_TADPERSONA_H
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-typedef struct {
-    char nombre[10];
-    char dni[8];
-    int edad;
-    float peso;
-
-}Persona;
-
-Persona* Persona_crear();
-void Persona_set(Persona *persona, char nombre[10], char dni[8], int edad, float peso);
-char *Persona_getNombre(Persona *persona);
-char *Persona_getDni(Persona *persona);
-int Persona_getEdad(Persona *persona);
-int Persona_getPeso(Persona *persona);
-void Persona_destruir(Persona *persona);
-
-
-
 #endif //TADPERSONA_TADPERSONA_H
